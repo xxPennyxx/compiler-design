@@ -1,0 +1,57 @@
+#include <iostream> 
+using namespace std; 
+class Physics 
+{ 
+    public: 
+    int p; 
+    public:  
+    void getmksp() 
+    { 
+        cin>>p; 
+    } 
+}; 
+class Chemistry 
+{ 
+    public: 
+    int c; 
+    public:  
+    void getmksc() 
+    { 
+        cin>>c; 
+    } 
+}; 
+class Maths 
+{ 
+    public: 
+    int mths; 
+    public:  
+    void getmksm() 
+    { 
+        cin>>mths; 
+    } 
+}; 
+class Marks: public Physics, public Chemistry, public Maths 
+{ 
+    public: 
+    int roll, marks; 
+    string name; 
+    public: 
+    Marks(string n, int r) 
+    { 
+        name=n; 
+        roll=r; 
+    } 
+    void display() 
+    { 
+        cout<<(p+c+mths)<<endl; 
+    } 
+}; 
+int main() 
+{ 
+    Marks m1("Jake",28); 
+    m1.getmksp(); 
+    m1.getmksc(); 
+    m1.getmksm(); 
+    m1.display(); 
+    return 0; 
+} 
